@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMICaluculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMQ-EE-KII">
+                                <rect key="frame" x="77" y="219" width="260" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-O1-rUW">
+                                <rect key="frame" x="77" y="299" width="260" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhS-3C-oks">
+                                <rect key="frame" x="77" y="433" width="260" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="計算">
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calcButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iWf-X0-qtI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lge-E2-Rnt">
+                                <rect key="frame" x="150" y="360" width="125" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="FbM-7P-7va"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身長と体重を入力してください。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnE-nZ-sNE">
+                                <rect key="frame" x="77" y="107" width="260" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mMQ-EE-KII" firstAttribute="top" secondItem="bnE-nZ-sNE" secondAttribute="bottom" constant="91" id="5DN-pl-uqH"/>
+                            <constraint firstItem="bnE-nZ-sNE" firstAttribute="leading" secondItem="mMQ-EE-KII" secondAttribute="leading" id="8JP-p5-f83"/>
+                            <constraint firstItem="Lge-E2-Rnt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="Dym-pJ-42u"/>
+                            <constraint firstItem="bnE-nZ-sNE" firstAttribute="leading" secondItem="EhS-3C-oks" secondAttribute="leading" id="Gdl-N2-mm0"/>
+                            <constraint firstItem="bnE-nZ-sNE" firstAttribute="trailing" secondItem="EhS-3C-oks" secondAttribute="trailing" id="Pgu-Qv-4Xd"/>
+                            <constraint firstItem="Lge-E2-Rnt" firstAttribute="top" secondItem="ljs-O1-rUW" secondAttribute="bottom" constant="27" id="Q7I-n2-cdw"/>
+                            <constraint firstItem="mMQ-EE-KII" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T3M-21-6Ia"/>
+                            <constraint firstItem="bnE-nZ-sNE" firstAttribute="leading" secondItem="ljs-O1-rUW" secondAttribute="leading" id="YBv-sE-Duw"/>
+                            <constraint firstItem="Lge-E2-Rnt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aIv-j3-r4s"/>
+                            <constraint firstItem="bnE-nZ-sNE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fhJ-d9-OMK"/>
+                            <constraint firstItem="EhS-3C-oks" firstAttribute="top" secondItem="Lge-E2-Rnt" secondAttribute="bottom" constant="34" id="fqq-gx-fUb"/>
+                            <constraint firstItem="Lge-E2-Rnt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="360" id="hTT-NC-gob"/>
+                            <constraint firstItem="bnE-nZ-sNE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="hfS-cq-DBh"/>
+                            <constraint firstItem="bnE-nZ-sNE" firstAttribute="trailing" secondItem="ljs-O1-rUW" secondAttribute="trailing" id="l0x-xa-ZHF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BMIlabel" destination="Lge-E2-Rnt" id="zKh-tX-4KM"/>
+                        <outlet property="heightTextField" destination="mMQ-EE-KII" id="3PU-Sm-YnO"/>
+                        <outlet property="weightTextField" destination="ljs-O1-rUW" id="KYE-0p-t8N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.8985507246376816" y="53.571428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
